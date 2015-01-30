@@ -39,19 +39,19 @@ daemonize true
 
 # Store the pid of the server in the file at “path”.
 #
-pidfile '/home/ubuntu/apps/MyApp/tmp/pids/puma.pid'
+pidfile '/home/ubuntu/apps/MyApp/shared/tmp/pids/puma.pid'
 
 # Use “path” as the file to store the server info state. This is
 # used by “pumactl” to query and control the server.
 #
-state_path '/home/ubuntu/apps/MyApp/tmp/pids/puma.state'
+state_path '/home/ubuntu/apps/MyApp/shared/tmp/pids/puma.state'
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # (“append”) specifies whether the output is appended, the default is
 # “false”.
 #
 # stdout_redirect '/home/ubuntu/apps/MyApp/log/stdout', '/u/apps/lolcat/log/stderr'
-stdout_redirect '/home/ubuntu/apps/MyApp/log/stdout', '/home/ubuntu/apps/MyApp/log/stderr', true
+stdout_redirect '/home/ubuntu/apps/MyApp/shared/tmp/log/stdout', '/home/ubuntu/apps/MyApp/shared/tmp/log/stderr', true
 
 # Disable request logging.
 #
@@ -73,7 +73,7 @@ stdout_redirect '/home/ubuntu/apps/MyApp/log/stdout', '/home/ubuntu/apps/MyApp/l
 #
 # bind 'tcp://0.0.0.0:9292'
 # bind 'unix:///var/run/puma.sock'
-bind 'unix:///home/ubuntu/apps/MyApp/tmp/sockets/puma.sock'
+bind 'unix:///home/ubuntu/apps/MyApp/shared/tmp/sockets/puma.sock'
 # bind 'unix:///var/run/puma.sock?umask=0111'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
 
