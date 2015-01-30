@@ -51,7 +51,7 @@ state_path '/home/ubuntu/apps/MyApp/shared/tmp/pids/puma.state'
 # “false”.
 #
 # stdout_redirect '/home/ubuntu/apps/MyApp/log/stdout', '/u/apps/lolcat/log/stderr'
-stdout_redirect '/home/ubuntu/apps/MyApp/shared/tmp/log/stdout', '/home/ubuntu/apps/MyApp/shared/tmp/log/stderr', true
+stdout_redirect '/home/ubuntu/apps/MyApp/shared/tmp/log/puma.stdout', '/home/ubuntu/apps/MyApp/shared/tmp/log/puma.stderr', true
 
 # Disable request logging.
 #
