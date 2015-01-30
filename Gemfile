@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'puma', '2.1.0'
 gem 'figaro', '1.1.0'
 gem 'mina', '0.3.2'
+gem 'sidekiq', '3.3.1'
 gem 'mina-sidekiq', '0.3.1', :require => false
 gem 'mina-puma', '0.2.0', :require => false
 

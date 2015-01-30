@@ -29,31 +29,7 @@ set :shared_paths, ['config/database.yml', 'log', 'config/secrets.yml']
 # ### chruby_path
 # Path where *chruby* init scripts are installed.
 #
-set_default :chruby_path, "/usr/local/share/chruby/chruby.sh"
-
-
-# ## Tasks
-
-# ### chruby[version]
-# Switch to given Ruby version
-
-task :chruby, :env do |t, args|
-  unless args[:env]
-    print_error "Task 'chruby' needs a Ruby version as an argument."
-    print_error "Example: invoke :'chruby[ruby-1.9.3-p392]'"
-    die
-  end
-
-  queue %{
-    echo "-----> chruby to version: '#{args[:env]}'"
-    if [[ ! -s "#{chruby_path}" ]]; then
-      echo "! chruby.sh init file not found"
-      exit 1
-    fi
-    source #{chruby_path}
-    #{echo_cmd %{chruby "#{args[:env]}"}} || exit 1
-  }
-end
+set :chruby_path, "/usr/local/share/chruby/chruby.sh"
 
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
